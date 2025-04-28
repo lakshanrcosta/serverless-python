@@ -1,4 +1,7 @@
-FastAPI
-gunicorn
+fastapi
 uvicorn
+gunicorn
 python-decouple
+sqlalchemy
+pymysql
+typing-extensions
