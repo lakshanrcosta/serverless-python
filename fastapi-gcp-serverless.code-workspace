@@ -1,0 +1,42 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "python.pythonPath": "${workspaceFolder}/.venv/bin/python",
+        "python.formatting.provider": "black",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.linting.flake8Enabled": true,
+        "python.testing.pytestEnabled": true,
+        "editor.formatOnSave": true,
+        "yaml.schemas": {
+            "https://raw.githubusercontent.com/GoogleCloudPlatform/cloud-builders/master/cloudbuild/schema.json": [
+                "cloudbuild.yaml"
+            ]
+        },
+        "files.exclude": {
+            "**/__pycache__": true,
+            "**/.venv": true,
+            "**/.gcloudignore": true
+        },
+        "terminal.integrated.env.linux": {
+            "VIRTUAL_ENV": "${workspaceFolder}/.venv",
+            "PATH": "${workspaceFolder}/.venv/bin:${env:PATH}"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "redhat.vscode-yaml",
+            "njpwerner.autodocstring",
+            "VisualStudioExptTeam.vscodeintellicode",
+            "ms-azuretools.vscode-docker",
+            "kamikillerto.vscode-colorize",
+            "ms-python.vscode-pylance",
+            "ms-toolsai.jupyter"
+        ]
+    }
+}

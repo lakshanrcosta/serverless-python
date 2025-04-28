@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+.env
+.venv
+env/
+venv/
+ENV/
+
+# VS Code settings
+.vscode/
+
+# Google Cloud SDK configuration
+.gcloudignore
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Virtualenv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Test output
+htmlcov/
+.tox/
+.nox/
+.coverage
+coverage.xml
+nosetests.xml
+test-results.xml
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# Unit test / coverage reports
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+
+# Terraform (if using for infra)
+.terraform/
+
+# Local env files
+*.env
+
+# Backup files
+*.bak
+*.tmp
+*.swp
+
+# IDE files
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project
+*.komodoproject
+*.kate-swp
+*.njsproj
+*.suo
+*.ntvs*
+*.sln
+*.psess
+
+# Docker
+*.tar
+docker-compose.override.yml
+
+# System
+Thumbs.db
+ehthumbs.db
+
+# GCP Specific
+.cloudbuild/
+Dockerfile
+app.yaml
+cron.yaml
+index.yaml
+queue.yaml
