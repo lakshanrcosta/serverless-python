@@ -8,7 +8,7 @@ class TodoRepository:
 
     @staticmethod
     def create(db: Session, todo_create: TodoCreate) -> Todo:
-        db_todo = Todo(**todo_create.dict())
+        db_todo = Todo(**todo_create.model_dump())
         db.add(db_todo)
         db.commit()
         db.refresh(db_todo)
@@ -24,7 +24,7 @@ class TodoRepository:
 
     @staticmethod
     def update(db: Session, db_todo: Todo, todo_update: TodoUpdate) -> Todo:
-        for field, value in todo_update.dict(exclude_unset=True).items():
+        for field, value in todo_update.model_dump(exclude_unset=True).items():
             setattr(db_todo, field, value)
         db.commit()
         db.refresh(db_todo)
