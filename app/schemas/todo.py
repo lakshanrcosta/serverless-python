@@ -1,11 +1,14 @@
 # File: app/schemas/todo.py
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
+from typing import Optional
 
 class TodoBase(BaseModel):
     title: str
-    description: str | None = None
+    description: Optional[str] = None
     completed: bool = False
+
+    model_config = ConfigDict(from_attributes=True)
 
 class TodoCreate(TodoBase):
     pass
@@ -15,6 +18,3 @@ class TodoUpdate(TodoBase):
 
 class TodoResponse(TodoBase):
     id: int
-
-    class Config:
-        orm_mode = True

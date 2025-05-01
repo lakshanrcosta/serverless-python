@@ -1,2 +1,6 @@
 scripts:
   runserver: uvicorn app.main:app --reload
+  installs: venv/bin/python -m pip install -r requirements.txt
+  test: pytest .
+  build: docker build
+  push: docker push

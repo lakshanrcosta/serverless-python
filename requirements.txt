@@ -6,3 +6,6 @@ sqlalchemy
 pymysql
 typing-extensions
 rav
+pytest
+pytest-cov
+httpx
