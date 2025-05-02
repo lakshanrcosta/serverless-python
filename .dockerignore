@@ -1,0 +1,136 @@
+# --- Python ---
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+.tox/
+.nox/
+.hypothesis/
+
+# Static analysis tools
+.mypy_cache/
+.pyre/
+.pytype/
+
+# PyInstaller
+*.spec
+
+# Cython debug symbols
+cython_debug/
+
+# --- Framework-specific ---
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# --- IDEs and Editors ---
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# --- OS Specific ---
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- GCP ---
+# Google Cloud SDK credentials and config
+.gcloud/
+*-key.json  # Match specific key files (e.g., service account keys)
+
+# Terraform state files
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Serverless framework state
+.serverless/
+
+# --- Docker ---
+# Docker-related files
+docker-compose.override.yml
+docker-compose.local.yml
+*.log  # Uncomment if logs are generated in the source tree
+
+# --- General ---
+# PEP 582; used by PDM, Flit, and other packaging tools
+__pypackages__/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*.orig
+*.rej
+*.~lock.*
+
+# Backup files
+*.bak
+*.old
+*.save
+
+# Lock files
+*.lock

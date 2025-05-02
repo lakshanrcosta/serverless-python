@@ -1,6 +1,25 @@
 scripts:
+  # Full stack for local dev
+  build-app: docker compose -f docker-compose.yml build
+  run-app: docker compose -f docker-compose.yml up -d
+  stop-app: docker compose down
+  logs: docker compose logs -f
+
+  # Standalone API (for deployment/testing)
+  build-api: docker build -f Dockerfile.api -t serverless-py-api .
+  shell-api: docker run -it --rm -v $(pwd):/app serverless-py-api /bin/bash
+  create-network: docker network create serverless-net
+  run-db: docker run -d --rm --network serverless-net --name mysql_db -p 3308:3306 -e MYSQL_ROOT_PASSWORD=Dev@r0ot -e MYSQL_DATABASE=todo_db -v mysql_data:/var/lib/mysql mysql:8.0
+  run-api: docker run --rm --network serverless-net --name serverless-py-api -p 8000:8000 --env-file .env -v $(pwd):/app serverless-py-api
+  stop-db: docker stop mysql_db
+  stop-api: docker stop serverless-py-api
+  
+  # Local Python-only dev
   runserver: uvicorn app.main:app --reload
   installs: venv/bin/python -m pip install -r requirements.txt
   test: pytest .
-  build: docker build
-  push: docker push
+
+  # Deployment
+
+
+  push: docker push 
